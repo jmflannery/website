@@ -6,19 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jmflannery/website.git"
+  },
   "author": "Jack Flannery",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-clean": "^0.3.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
     "gulp-imagemin": "^2.3.0",
-    "gulp-jade": "^1.0.1",
     "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^1.2.0",
+    "gulp-pug": "^3.1.0",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.2.0"
+    "gulp-uglify": "^1.2.0",
+    "run-sequence": "^1.2.2"
   }
 }
