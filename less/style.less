@@ -1,6 +1,17 @@
+@white_copy: #F1F1F1;
+@grey_background: #2E2B28;
+@blue_link: #467AA9;
+@red_hover: #D93B3E;
+@green: #30420F;
+
+html {
+  font-size: 100%;
+}
+
 body {
-  background-color: #272822;
+  background-color: @grey_background;
   font-family: 'Source Code Pro';
+  color: @white_copy;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,62 +20,195 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: #66D9EF;
+  color: @blue_link;
   &:hover {
-    color: #F92672;
+    color: @red_hover;
   }
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+.big {
+  font-size: 3rem;
+}
+
+.tiny {
+  font-family: 'Source Code Pro';
+  padding: 0 16px;
+  vertical-align: text-bottom;
 }
 
 .icons {
   font-family: 'FontasticIcons';
 }
 
-section#header {
-  text-align: center;
-  color: #66D9EF;
-  margin-top: 6px;
+.green_mtn {
+  color: @green;
+}
 
-  .profile_image {
-    border-radius: 50%;
+section.hero {
+
+  .image {
     display: block;
-    margin: 6px auto;
+    background-image: url('../img/smoky_circular_mobile.png');
+    margin: 12px auto;
+    width: 280px;
+    height: 280px;
   }
+}
 
-  .profile_links {
-    font-size: 3rem;
-    padding: 0 5px;
-    a {
-      color: #F92672;
-      &:hover {
-        color: #66D9EF;
+section.page {
+  padding: 8px 28px;
+}
+
+section.header {
+  text-align: center;
+  color: @white_copy;
+  margin-bottom: 12px;
+
+  ul {
+    list-style: none;
+    margin: 0px;
+
+    li {
+      margin: 0px;
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      &.profile_links {
+        font-size: 2rem;
+
+        a {
+          margin: 0 8px;
+          color: @blue_link;
+          &:hover {
+            color: @red_hover;
+          }
+        }
       }
     }
-    p {
+  }
+}
+
+section.content {
+  font-size: 1rem;
+}
+
+section.footer {
+  color: @blue_link;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+  section.hero {
+    margin-top: 0px;
+
+    .image {
       margin: 0;
+      background-image: url('../img/smoky_hero_tablet.png');
+      width: 100%;
+      height: 451px;
+      background-size: cover;
+    }
+  }
+
+  section.page {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    text-align: left;
+    width: 55%;
+  }
+
+  section.header {
+    text-align: left;
+
+    ul {
+      li {
+        display: inline-block;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        &.profile_links {
+          margin-left: 32px;
+        }
+      }
     }
   }
 }
 
-section#content {
-  color: #F8F8F2;
-  margin-top: 12px;
+@media only screen and (min-width: 1024px) {
+
+  section.hero {
+
+    .image {
+      background-image: url('../img/smoky_hero_desktop.png');
+      height: 601px;
+    }
+  }
+
+  section.page {
+    width: 60%;
+  }
+
+  section.header {
+
+    ul {
+      li {
+        h1 {
+          font-size: 3.1rem;
+        }
+
+        &.profile_links {
+          margin-left: 92px;
+        }
+      }
+    }
+  }
+
+  section.content {
+    font-size: 1.2rem;
+  }
 }
 
-.green_mtn {
-  color: #A6E22E;
-}
+@media only screen and (min-width: 1197px) {
 
-section#footer {
-  text-align: center;
-  color: #F92672;
-}
+  section.hero {
 
-.big {
-  font-size: 4em;
-}
+    .image {
+      background-image: url('../img/smoky_hero_desktop_hd.png');
+      height: 845px;
+    }
+  }
 
-.tiny {
-  font-size: 2em;
-  padding: 0 16px;
-  vertical-align: text-bottom;
+  section.page {
+    width: 65%;
+    padding: 32px 48px;
+  }
+
+  section.header {
+
+    ul {
+      li {
+        h1 {
+          font-size: 3.2rem;
+        }
+
+        &.profile_links {
+          margin-left: 256px;
+        }
+      }
+    }
+  }
+
+  section.content {
+    font-size: 1.4rem;
+  }
 }
